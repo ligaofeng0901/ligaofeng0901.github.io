@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>公园打卡 - 技术支持</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #ffffff;
+        --fg: #111827;
+        --muted: #6b7280;
+        --card: #f8fafc;
+        --border: #e5e7eb;
+        --accent: #16a34a;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b1220;
+          --fg: #e5e7eb;
+          --muted: #9ca3af;
+          --card: #0f1a2e;
+          --border: #22304a;
+          --accent: #34d399;
+        }
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+        line-height: 1.65;
+      }
+      header {
+        padding: 28px 18px 10px;
+        border-bottom: 1px solid var(--border);
+        background: linear-gradient(135deg, rgba(22,163,74,0.10), rgba(14,116,144,0.08));
+      }
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 18px;
+      }
+      h1 { margin: 0 0 6px; font-size: 24px; }
+      .meta { color: var(--muted); font-size: 13px; }
+      h2 { margin-top: 26px; font-size: 18px; }
+      h3 { margin-top: 18px; font-size: 15px; }
+      p { margin: 10px 0; }
+      ul { margin: 10px 0 10px 18px; padding: 0; }
+      li { margin: 6px 0; }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 14px 14px;
+        margin: 12px 0;
+      }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        font-size: 0.95em;
+      }
+      footer {
+        margin-top: 28px;
+        padding: 16px 18px 28px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <main>
+        <h1>《公园打卡》技术支持</h1>
+        <div class="meta">更新时间：2026-04-16 · <a href="./support-en.html">English</a> · <a href="./privacy-policy-zh.html">隐私政策</a></div>
+      </main>
+    </header>
+
+    <main>
+      <div class="card">
+        <p>
+          如果你在使用《公园打卡》过程中遇到问题，欢迎通过邮箱联系我们：
+          <a href="mailto:ligaofeng0901@gmail.com">ligaofeng0901@gmail.com</a>。
+        </p>
+        <p class="meta">
+          为了更快定位问题，请在邮件中尽量提供：iOS 版本、机型、应用版本、问题复现步骤，以及相关截图。
+        </p>
+      </div>
+
+      <h2>常见问题（FAQ）</h2>
+
+      <h3>1) 定位按钮点了没反应 / 无法定位到当前位置</h3>
+      <ul>
+        <li>请在系统设置中确认已允许本应用的定位权限（建议“使用期间”或更高）。</li>
+        <li>确认系统“定位服务”已开启。</li>
+        <li>若你此前选择了“不允许”，需要到系统设置里手动开启。</li>
+      </ul>
+
+      <h3>2) 扫描相册没有新增 / 扫描后没有命中公园</h3>
+      <ul>
+        <li>请确认已允许本应用读取相册权限。</li>
+        <li>照片若未包含位置信息（拍照时关闭了定位），可能无法匹配到公园。</li>
+        <li>部分照片在室内/高楼间定位漂移较大，会影响匹配准确性。</li>
+      </ul>
+
+      <h3>3) 自动照片增量扫描如何工作？会不会卡顿？</h3>
+      <ul>
+        <li>自动扫描按增量方式执行，优先处理你上次扫描之后的新照片。</li>
+        <li>扫描通常分批进行，尽量避免长时间占用界面。</li>
+      </ul>
+
+      <h3>4) 定位自动打卡没有触发</h3>
+      <ul>
+        <li>请确认你已开启“定位自动打卡”功能，并已授予定位权限。</li>
+        <li>自动打卡通常需要在公园范围内停留一段时间；路过一般不会触发。</li>
+        <li>若当前位置精度较差，应用可能会暂时不判断以避免误触发。</li>
+      </ul>
+
+      <h3>5) 关于高级版购买/恢复</h3>
+      <ul>
+        <li>请确认你使用的是同一个 Apple ID。</li>
+        <li>可在购买页面点击“恢复解锁”。</li>
+        <li>若仍无法恢复，请邮件联系并提供购买相关信息（不建议提供敏感账号密码）。</li>
+      </ul>
+
+      <h2>反馈与建议</h2>
+      <p>
+        我们欢迎你提出功能建议与体验反馈。请发送邮件到：
+        <a href="mailto:ligaofeng0901@gmail.com">ligaofeng0901@gmail.com</a>。
+      </p>
+
+      <h2>隐私相关</h2>
+      <p>
+        本应用定位与相册相关能力主要在你的手机本地处理，不会将定位轨迹或相册照片上传到服务器。
+        你可在应用内“关于”页面查看隐私政策详情。
+      </p>
+    </main>
+
+    <footer>
+      <div>© 2026 公园打卡 · 技术支持（中文）</div>
+    </footer>
+  </body>
+</html>

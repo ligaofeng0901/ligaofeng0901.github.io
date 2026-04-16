@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Park Check-in - Support</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #ffffff;
+        --fg: #111827;
+        --muted: #6b7280;
+        --card: #f8fafc;
+        --border: #e5e7eb;
+        --accent: #16a34a;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b1220;
+          --fg: #e5e7eb;
+          --muted: #9ca3af;
+          --card: #0f1a2e;
+          --border: #22304a;
+          --accent: #34d399;
+        }
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+        line-height: 1.65;
+      }
+      header {
+        padding: 28px 18px 10px;
+        border-bottom: 1px solid var(--border);
+        background: linear-gradient(135deg, rgba(22,163,74,0.10), rgba(14,116,144,0.08));
+      }
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 18px;
+      }
+      h1 { margin: 0 0 6px; font-size: 24px; }
+      .meta { color: var(--muted); font-size: 13px; }
+      h2 { margin-top: 26px; font-size: 18px; }
+      h3 { margin-top: 18px; font-size: 15px; }
+      p { margin: 10px 0; }
+      ul { margin: 10px 0 10px 18px; padding: 0; }
+      li { margin: 6px 0; }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 14px 14px;
+        margin: 12px 0;
+      }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      footer {
+        margin-top: 28px;
+        padding: 16px 18px 28px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <main>
+        <h1>Park Check-in - Support</h1>
+        <div class="meta">Last Updated: 2026-04-16 · <a href="./support-zh.html">中文</a> · <a href="./privacy-policy-en.html">Privacy Policy</a></div>
+      </main>
+    </header>
+
+    <main>
+      <div class="card">
+        <p>
+          Need help with Park Check-in? Contact us at:
+          <a href="mailto:ligaofeng0901@gmail.com">ligaofeng0901@gmail.com</a>.
+        </p>
+        <p class="meta">
+          To help us troubleshoot faster, please include: iOS version, device model, app version, steps to reproduce, and screenshots if possible.
+        </p>
+      </div>
+
+      <h2>FAQ</h2>
+
+      <h3>1) Location button doesn’t respond / cannot center to my location</h3>
+      <ul>
+        <li>Check that Location Services is enabled on your device.</li>
+        <li>Check that the app has location permission (ideally “While Using the App” or higher).</li>
+        <li>If you previously denied permission, you must re-enable it in iOS Settings.</li>
+      </ul>
+
+      <h3>2) Photo scan shows no new photos / photos don’t match any park</h3>
+      <ul>
+        <li>Ensure the app has Photo Library permission.</li>
+        <li>If your photos don’t contain location metadata, matching may not be possible.</li>
+        <li>Inaccurate GPS (e.g., indoors) may reduce matching accuracy.</li>
+      </ul>
+
+      <h3>3) How does incremental photo scanning work? Will it slow down the app?</h3>
+      <ul>
+        <li>Scanning runs incrementally and prioritizes photos taken after the last scan.</li>
+        <li>Work is processed in batches to reduce UI blocking where possible.</li>
+      </ul>
+
+      <h3>4) Automatic location check-in does not trigger</h3>
+      <ul>
+        <li>Make sure you enabled the feature and granted location permission.</li>
+        <li>Automatic check-in usually requires staying in a park area for some time; drive-by passes typically won’t trigger.</li>
+        <li>If location accuracy is poor, the app may avoid making a decision to reduce false positives.</li>
+      </ul>
+
+      <h3>5) Pro purchase / restore</h3>
+      <ul>
+        <li>Make sure you are using the same Apple ID used for the purchase.</li>
+        <li>Use the “Restore Purchases” option in the purchase page.</li>
+        <li>If it still fails, email support with relevant purchase context (do not share sensitive credentials).</li>
+      </ul>
+
+      <h2>Feedback</h2>
+      <p>
+        We welcome feature requests and feedback. Email:
+        <a href="mailto:ligaofeng0901@gmail.com">ligaofeng0901@gmail.com</a>.
+      </p>
+
+      <h2>Privacy</h2>
+      <p>
+        The app primarily processes location and photo-related information on-device and does not upload your location history or photo content to a server.
+        See the in-app Privacy Policy for details.
+      </p>
+    </main>
+
+    <footer>
+      <div>© 2026 Park Check-in · Support (EN)</div>
+    </footer>
+  </body>
+</html>
