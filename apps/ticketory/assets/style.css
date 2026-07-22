@@ -1,0 +1,220 @@
+:root {
+  --bg: #1a1612;
+  --bg-elevated: #241f19;
+  --ink: #f3ebe0;
+  --muted: #a89a88;
+  --accent: #c4a35a;
+  --accent-dim: #8a7340;
+  --paper: #e8dcc8;
+  --line: rgba(196, 163, 90, 0.28);
+  --danger: #c45a5a;
+  --max: 44rem;
+  --radius: 14px;
+  --font: "Iowan Old Style", "Palatino Linotype", Palatino, "Songti SC", "Noto Serif SC", Georgia, serif;
+  --sans: "Avenir Next", "PingFang SC", "Helvetica Neue", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(196, 163, 90, 0.12), transparent),
+    linear-gradient(180deg, #221c16 0%, var(--bg) 40%, #12100e 100%);
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+a { color: var(--accent); text-underline-offset: 0.2em; }
+a:hover { color: var(--paper); }
+
+.wrap {
+  width: min(var(--max), calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+header.appbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2rem;
+}
+
+.brand {
+  font-family: var(--font);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.brand span {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  margin-top: 0.15rem;
+}
+
+nav.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+  font-size: 0.9rem;
+}
+
+nav.links a {
+  text-decoration: none;
+  color: var(--muted);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.1rem;
+}
+
+nav.links a:hover,
+nav.links a[aria-current="page"] {
+  color: var(--accent);
+  border-bottom-color: var(--accent-dim);
+}
+
+h1 {
+  font-family: var(--font);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 600;
+  color: var(--paper);
+  line-height: 1.25;
+  margin: 0 0 0.5rem;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-family: var(--font);
+  font-size: 1.25rem;
+  color: var(--accent);
+  margin: 2rem 0 0.75rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin: 1.25rem 0 0.5rem;
+  color: var(--paper);
+}
+
+p, li { color: var(--ink); }
+ul { padding-left: 1.25rem; }
+li { margin: 0.35rem 0; }
+
+.card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.35rem;
+  margin: 1.25rem 0;
+}
+
+.card strong { color: var(--paper); }
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid var(--line);
+  color: var(--paper);
+  background: transparent;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #1a1612;
+  border-color: var(--accent);
+}
+
+.btn:hover { filter: brightness(1.08); }
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.lang-switch {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.lang-switch a {
+  text-decoration: none;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  color: var(--muted);
+}
+
+.lang-switch a.active {
+  background: rgba(196, 163, 90, 0.18);
+  color: var(--accent);
+}
+
+.hero-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+
+.hero-list li {
+  margin: 0.75rem 0;
+  padding: 1rem 1.15rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.hero-list a {
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.hero-list p {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+code {
+  font-size: 0.9em;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
